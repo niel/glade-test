@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <RootNamespace>glade_gtk_ui_demo</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <PlatformTarget>x64</PlatformTarget>
+      <OutputPath>..\bin\Debug\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+      <PlatformTarget>anycpu</PlatformTarget>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="GtkSharp" Version="3.22.24.36" />
+    </ItemGroup>
+
+</Project>

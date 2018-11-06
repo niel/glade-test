@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="no-image">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-discard</property>
+  </object>
+  <object class="GtkApplicationWindow" id="AppWindow">
+    <property name="visible">True</property>
+    <property name="can_focus">True</property>
+    <property name="title" translatable="yes">LSL Editor</property>
+    <property name="window_position">center</property>
+    <property name="default_width">1024</property>
+    <property name="default_height">768</property>
+    <property name="icon_name">applications-utilities</property>
+    <property name="startup_id">AppWindow</property>
+    <signal name="destroy" handler="OnAppWindowDestroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkBox" id="GtkHBox1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="baseline_position">bottom</property>
+        <child>
+          <object class="GtkMenuBar" id="MenuBar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuItem" id="MB1_File">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Actions related to files.</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_File_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkMenuItem" id="MB1_File_sm_New">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">_New</property>
+                        <property name="use_underline">True</property>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="MB1_File_sm_New_sm">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_New_sm_Solution">
+                                <property name="label">Solution...</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="has_tooltip">True</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="newProjectToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="n" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_New_sm_LSLScript">
+                                <property name="label">LSL Script</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="newFileToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="n" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_New_sm_LSLIScript">
+                                <property name="label">LSLI Script</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="lSLIScriptToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="m" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_New_sm_Notecard">
+                                <property name="label">Notecard</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="notecardToolStripMenuItem_Click" swapped="no"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="MB1_File_sm_Open">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">_Open</property>
+                        <property name="use_underline">True</property>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="MB1_File_sm_Open_sm">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Open_sm_ProjectSolution">
+                                <property name="label">Project/Solution</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="openProjectSolutionToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="o" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Open_sm_NotecardFiles">
+                                <property name="label">Notecard File(s)</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="openNoteFilesToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="o" signal="activate" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Open_sm_ScriptFiles">
+                                <property name="label">Script File(s)</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="openScriptFilesToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="o" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_RecentFiles">
+                        <property name="label">Open Recent Files</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="recentFileToolStripMenuItem_DropDownItemClicked" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_RecentSolutions">
+                        <property name="label">Open Recent Solutions</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="recentProjectToolStripMenuItem_DropDownItemClicked" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="MB1_File_sm_Add">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">_Add</property>
+                        <property name="use_underline">True</property>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="MB1_File_sm_Add_sm">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Add_sm_NewProject">
+                                <property name="label">New Project...</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="newProjectToolStripMenuItem1_Click" swapped="no"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Add_sm_1">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Add_sm_ExistingProject">
+                                <property name="label">Existing Project...</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="existingProjectToolStripMenuItem_Click" swapped="no"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_Close">
+                        <property name="label">gtk-close</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="closeFileToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="w" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_CloseSolution">
+                        <property name="label">Close Solution</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="closeSolutiontoolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_ImportExample">
+                        <property name="label">Import Example...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="importExampleToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_ExportToLSL">
+                        <property name="label">Export To LSL</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="toolStripMenuItem2_Click" swapped="no"/>
+                        <accelerator key="e" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_Save">
+                        <property name="label">gtk-save</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="saveToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="s" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_SaveAs">
+                        <property name="label">gtk-save-as</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="saveAsToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_SaveAll">
+                        <property name="label">Save All</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="SaveAllToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="s" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_PageSetup">
+                        <property name="label">gtk-page-setup</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="pageSettingsToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_PrintPreview">
+                        <property name="label">gtk-print-preview</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="printPreviewtoolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_Print">
+                        <property name="label">gtk-print</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="printToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="p" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator8">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_CopyToClipboard">
+                        <property name="label">Copy To Clipboard</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="copyToClipboardToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator9">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_File_sm_Quit">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="exitToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F4" signal="activate" modifiers="GDK_MOD1_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_File_sm_Separator10">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_Edit">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Edit contents of files or modify program behaviour.</property>
+                <property name="label" translatable="yes">_Edit</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_Edit_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Undo">
+                        <property name="label">gtk-undo</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="undoToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="z" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Redo">
+                        <property name="label">gtk-redo</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="redoToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="z" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Cut">
+                        <property name="label">gtk-cut</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="cutToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="x" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Copy">
+                        <property name="label">gtk-copy</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="copyToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="c" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Paste">
+                        <property name="label">gtk-paste</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="pasteToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="v" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Delete">
+                        <property name="label">gtk-delete</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="deleteToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="Delete" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_SelectAll">
+                        <property name="label">gtk-select-all</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="selectAllToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="a" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_SelectAllToSL">
+                        <property name="label">Select All To SL</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="toolStripMenuItem8_Click" swapped="no"/>
+                        <accelerator key="a" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="MB1_File_sm_FindAndReplace">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Find/Replace</property>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="MB1_File_sm_FindAndReplace_sm">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_FindAndReplace_sm_Find">
+                                <property name="label">gtk-find</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="use_underline">True</property>
+                                <property name="use_stock">True</property>
+                                <signal name="button-press-event" handler="findToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="f" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_FindAndReplace_sm_Replace">
+                                <property name="label">gtk-find-and-replace</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="use_underline">True</property>
+                                <property name="use_stock">True</property>
+                                <signal name="button-press-event" handler="replaceToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="h" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_FindAndReplace_sm_Next">
+                                <property name="label">Next</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="findNextToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="F3" signal="activate"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_FindAndReplace_sm_Previous">
+                                <property name="label">Previous</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="findPreviousToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="F2" signal="activate"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Goto">
+                        <property name="label">Goto...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="toolStripMenuItem1_Click" swapped="no"/>
+                        <accelerator key="g" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="MB1_File_sm_Advanced">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Advanced</property>
+                        <child type="submenu">
+                          <object class="GtkMenu" id="MB1_File_smAdvanced">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Advanced_FormatDocument">
+                                <property name="label">Format Document</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="formatDocumentToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="d" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Advanced_FormatSelectedText">
+                                <property name="label">Format Selected Text</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="formatSelectedTextToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="e" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Advanced_sm_CommentSelectedText">
+                                <property name="label">Comment Selected Text</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="commentInToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="k" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkImageMenuItem" id="MB1_File_sm_Advanced_UncommentSelectedText">
+                                <property name="label">Uncomment Selected Text</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="image">no-image</property>
+                                <property name="use_stock">False</property>
+                                <signal name="button-press-event" handler="uncommentingSelectedTextToolStripMenuItem_Click" swapped="no"/>
+                                <accelerator key="l" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_CollapseToLSLI">
+                        <property name="label">Collapse To LSLI</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="CollapseToLSLIToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F10" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_ExpandToLSL">
+                        <property name="label">Expand To LSL</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="expandToLSLToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F11" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_ViewLSLI">
+                        <property name="label">View LSLI</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="viewLSLIToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F12" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Edit_sm_Separator6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Edit_sm_Preferences">
+                        <property name="label">gtk-preferences</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="optionsToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_View">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Look at the structure of your project solution.</property>
+                <property name="label" translatable="yes">_View</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_View_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_View_sm_SolutionExplorer">
+                        <property name="label">Solution Explorer</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="solutionExplorerToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_View_sm_Outline">
+                        <property name="label">Outline (Alpha)</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="outlineToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_Project">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Add new elements to your project.</property>
+                <property name="label" translatable="yes">_Project</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_Project_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Project_sm_AddNewObject">
+                        <property name="label">Add New Object</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="addNewObjecttoolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="a" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Project_sm_AddNewItem">
+                        <property name="label">Add New Item</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_Debug">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Debug your project.</property>
+                <property name="label" translatable="yes">_Debug</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_Debug_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Debug_sm_Start">
+                        <property name="label">Start</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="startToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F5" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Debug_sm_Stop">
+                        <property name="label">gtk-media-stop</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="button-press-event" handler="stopToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F5" signal="activate" modifiers="GDK_SHIFT_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Debug_sm_Separator1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Debug_sm_SyntaxChecker">
+                        <property name="label">Syntax Checker</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="syntaxCheckerToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F6" signal="activate"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_Window">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Manage your windows.</property>
+                <property name="label" translatable="yes">_Window</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_Window_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Window_sm_BrowserInWindow">
+                        <property name="label">Browser in Window</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="browserInWindowToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Window_sm_OnlineWikiInExternalBrowser">
+                        <property name="label">Online Wiki in External Browser</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="WikiSepBrowserToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Window_sm_Separator1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Window_sm_CloseActiveWindow">
+                        <property name="label">Close Active Window</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="closeActiveWindowToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="MB1_Help">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Various means to get help.</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="MB1_Help_sm">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_IndexLSLWiki">
+                        <property name="label">LSL Wiki Index</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="indexToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F1" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_HelpOnKeyord">
+                        <property name="label">Help On Keyord</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="helpKeywordToolStripMenuItem_Click" swapped="no"/>
+                        <accelerator key="F1" signal="activate"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_AskQuestion">
+                        <property name="label">Ask a Question/Get Help</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="toolStripMenuItem9_Click_1" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Window_sm_Separator">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_CheckForUpdate">
+                        <property name="label">Check For Update</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text">Ask  website if there is a newer version of this program.</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="toolStripMenuItem4_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Window_sm_Separator2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_BugReport">
+                        <property name="label">Bug Report...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="makeBugReportToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="MB1_Window_sm_Separator3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_ReleaseNotes">
+                        <property name="label">Release Notes...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">no-image</property>
+                        <property name="use_stock">False</property>
+                        <signal name="button-press-event" handler="releaseNotesToolStripMenuItem_Click" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="MB1_Help_sm_About">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToolbar" id="ToolBar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="ScrolledWindow1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="StatusBar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="baseline_position">bottom</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <accelerator key="F4" signal="activate-default" modifiers="GDK_MOD1_MASK"/>
+  </object>
+</interface>
