@@ -1,5 +1,6 @@
 ﻿using Gtk;
 using System;
+using System.IO;
 
 namespace glade_gtk_ui_demo
 {
@@ -25,7 +26,8 @@ namespace glade_gtk_ui_demo
 		{
 			Gtk.Application.Init();
 			Builder gui = new Builder();
-			gui.AddFromFile("/home/niel/dev/c-sharp/glade-gtk-ui-demo/glade-gtk-ui-demo/main.glade");
+			Directory.SetCurrentDirectory("../../../");
+			gui.AddFromFile(Path.Combine(Directory.GetCurrentDirectory(), "glade-gtk-ui-demo/main.glade"));
 			gui.Autoconnect(this);
 			Gtk.Application.Run();
 		}
